@@ -1,0 +1,9 @@
+改进：
+增加了Evaluation中precision的统计
+把DF的计算放到KNN的init中了。
+
+编程中遇到的主要问题：
+1、Map<String,Integer> key唯一，value不唯一，要按照value的递增（不减）顺序遍历
+2、遍历map的过程中put可以,但是remove不可以。
+3、计算p(Cj|W)不能用double，因为p(wi|cj)一般不超过0.01，
+这样100个词的条件概率相乘就变成了10^-200,没法比较了，应该用BigDecimal比较。
