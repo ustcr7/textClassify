@@ -1,8 +1,8 @@
 # -*- coding: cp936 -*-
 '''
-单词总量
-训练总量
-测试总量725
+单词总量44084
+训练文本总量2725
+测试文本总量725
 '''
 import os
 import math
@@ -121,7 +121,7 @@ def train():
             updateWeight()
             modelTest()
     
-
+#注意，需要填入正确的textNum、wordNum
 if __name__ == '__main__' :
     print "初始化:......"
     init()
